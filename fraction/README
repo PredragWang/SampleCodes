@@ -1,0 +1,21 @@
+README
+
+included:
+fraction.h, fraction.cpp, fraction_exception.h, test_fraction.cpp
+this README
+Makefile
+
+== Description ==
+The design and implementation of fraction. This implementation of fraction supports any fraction with numerator and denominator fit in 'long long' integer type in C++.
+
+In this implementation, a fraction is automatically simplified when it is created or modified. A defined exception will be thrown when
+a. trying to initiate a fraction with denominator = 0.
+b. trying to call set on denominator to set it to 0.
+c. trying to divide another fraction whose actual value is 0.
+
+== Installation ==
+Requirements: 
+G++ compliler supporting C++11 standard
+
+Compilation:
+Use command 'make' in the current directory
