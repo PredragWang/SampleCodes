@@ -78,7 +78,7 @@ void mm_free(void *start) {
         next_location = cur_location + cur_location_mcb->size;
         next_location_mcb = (mem_ctrl_blk *)(next_location);
         // if current location and next location are both available, merge them
-        if (cur_location_mcb->avail && next_location != last_valid_addr && next_location_mcb->avail){
+        if (cur_location_mcb->avail && next_location < last_valid_addr && next_location_mcb->avail){
             cur_location_mcb->size += next_location_mcb->size;
         }
         else {
